@@ -1,6 +1,7 @@
-import { useState, Fragment } from "react";
+import { useState } from "react";
 import ReactLoading from "react-loading";
 import { fetchAntData } from "./api";
+import { Race } from "./Components";
 
 interface IAntData {
   ants: [{ name: string; length: number; color: string; weight: number }];
@@ -32,6 +33,8 @@ function App() {
       {isLoading ? (
         <ReactLoading type={"spin"} color={"teal"} height={"5%"} width={"5%"} />
       ) : null}
+
+      {ants.length ? <Race ants={ants} /> : null}
     </div>
   );
 }
