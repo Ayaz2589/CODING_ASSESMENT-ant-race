@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# Ant Race - Frontend Assement
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### What is this application?
 
-## Available Scripts
+This application displays statics as well as calculations for likey win senarios for ant-racing.
 
-In the project directory, you can run:
+This application was built as a frontend assesment. A time limit of **2-3 hours** was put on the application, so many aspects may not have been best practices and were implemented in order to save time.
 
-### `npm start`
+### How to start App:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`cd` into the working directory and run `npm run start` in order to start the application on port `3000`.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Once the app has been loaded click the **Get Ant Data** button.
 
-### `npm test`
+This will fire a fake async request that will return the required ant data.
+(request has a random delay to simulate ASYNC request)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once Ant Data is loaded, they will be displayed along with various ant stats.
 
-### `npm run build`
+A new **Start Race** button will also apear. Once clicked The `generateAntWinLikelihoodCalculator()` function will be run with progress being displayed on the UI.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+As the Race reults are populated. The UI lists Ants from highest likelyhood to lowest. _This portion is not heavily designed due to time limit._
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Future additions:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Due to the time restraint of 3 hours many UI features where not added. In the future various additions should be added in order to enhance the User Experience:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Calculations should show a loading spinner when "In Progress".
+- Better designs for Ant "Cards".
+- Better experience for Race Results.
+- Remove "any" type from typescript.
